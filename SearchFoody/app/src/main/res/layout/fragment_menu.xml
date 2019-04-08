@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#e6e6e1">
+
+    <ImageView
+        android:id="@+id/img_header"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/res_two" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/img_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_item"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/layout_introduce_app"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:id="@+id/imgShare"
+                tools:ignore="ContentDescription"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_introduce" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_toEndOf="@+id/imgShare"
+                android:text="Giới thiệu app"
+                android:textColor="#2b2b2b"
+                android:textSize="18sp"
+                android:layout_toRightOf="@+id/imgShare" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_lien_he"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:id="@+id/img_lien_he"
+                tools:ignore="ContentDescription"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_contact" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_toEndOf="@+id/img_lien_he"
+                android:text="Liên hệ"
+                android:textColor="#2b2b2b"
+                android:textSize="18sp"
+                android:layout_toRightOf="@+id/img_lien_he" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:drawableLeft="@drawable/ic_list"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="15dp"
+        android:id="@+id/txt_title"
+        android:textSize="18sp"
+        android:textColor="#2b2b2b"
+        android:layout_width="match_parent"
+        android:text="Danh sách loại quán ăn"
+        android:layout_below="@id/layout_item"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginLeft="15dp"
+        android:id="@+id/recycler_menu"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

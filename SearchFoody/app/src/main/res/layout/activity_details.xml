@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="#c2f9ad"
+    tools:context=".feature.detail.DetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:text="Tên quán"
+            android:id="@+id/txt_name"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/txt_lb_sdt"
+            android:layout_below="@id/txt_name"
+            android:layout_width="wrap_content"
+            android:text="Số điện thoại"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#fd5242"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:text="Tên quán"
+            android:id="@+id/txt_sdt"
+            android:layout_below="@id/txt_lb_sdt"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/txt_lb_address"
+            android:layout_below="@id/txt_sdt"
+            android:layout_width="wrap_content"
+            android:text="Địa chỉ"
+            android:textStyle="bold"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#fd5242"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:text="Tên quán"
+            android:id="@+id/txt_address"
+            android:layout_below="@id/txt_lb_address"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/txt_lb_loai"
+            android:layout_width="wrap_content"
+            android:text="Thuộc loại"
+            android:textStyle="bold"
+            android:layout_below="@id/txt_address"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#fd5242"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:text="Tên quán"
+            android:id="@+id/txt_loai"
+            android:layout_below="@id/txt_lb_loai"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/layout_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="20sp"
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:text="Danh sách món ăn của quán"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_below="@id/txt_title"
+            android:layout_marginTop="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+</RelativeLayout>
